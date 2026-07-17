@@ -123,7 +123,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
-            className="glass absolute top-full right-4 left-4 mt-2 rounded-2xl p-3 shadow-raised md:hidden"
+            className="absolute top-full right-4 left-4 mt-2 rounded-2xl border border-border bg-surface-raised p-3 shadow-raised md:hidden"
           >
             <ul className="flex flex-col">
               {navItems.map((item) => {

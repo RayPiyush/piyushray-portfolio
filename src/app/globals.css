@@ -154,6 +154,14 @@ body {
   border: 1px solid var(--border-color);
 }
 
+/* Browsers without backdrop-filter get a solid surface instead of a
+   nearly-transparent panel with content bleeding through. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass {
+    background: var(--surface-raised);
+  }
+}
+
 @utility text-gradient {
   background: linear-gradient(120deg, var(--accent) 0%, #22d3ee 55%, #a855f7 100%);
   background-size: 200% auto;
