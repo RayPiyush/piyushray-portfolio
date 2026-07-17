@@ -23,6 +23,9 @@ const inter = Inter({
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  // Display font is only ever used at semibold — a single static weight
+  // ships far fewer bytes than the full variable file.
+  weight: "600",
   variable: "--font-space-grotesk",
   display: "swap",
 });
