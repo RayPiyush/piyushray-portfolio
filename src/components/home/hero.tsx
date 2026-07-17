@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { ArrowRight, Download, MapPin } from "lucide-react";
 import { profile, yearsOfExperience } from "@/data/profile";
 import { primarySocials } from "@/data/socials";
@@ -46,11 +46,11 @@ export function Hero() {
           <h1 className="mt-8 font-display text-4xl leading-[1.08] font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
             <TextReveal text="I build resilient systems" delay={0.1} />{" "}
             <span className="text-gradient animate-gradient-pan">
-              <TextReveal text="and refined experiences." delay={0.45} />
+              <TextReveal text="and refined experiences." delay={0.3} />
             </span>
           </h1>
 
-          <Reveal delay={0.7} y={16}>
+          <Reveal delay={0.35} y={16}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
               {profile.name} — {profile.role}
               {profile.company ? (
@@ -72,7 +72,7 @@ export function Hero() {
           </Reveal>
 
           {/* CTAs */}
-          <Reveal delay={0.85} y={16}>
+          <Reveal delay={0.5} y={16}>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Magnetic>
                 <Link
@@ -100,7 +100,7 @@ export function Hero() {
           </Reveal>
 
           {/* Socials */}
-          <Reveal delay={1} y={12}>
+          <Reveal delay={0.65} y={12}>
             <ul className="mt-10 flex items-center gap-2" aria-label="Social profiles">
               {primarySocials.map((social) => (
                 <li key={social.name}>
@@ -124,7 +124,7 @@ export function Hero() {
         </div>
 
         {/* Floating editor card */}
-        <Reveal delay={0.5} y={32} className="hidden lg:block">
+        <Reveal delay={0.4} y={32} className="hidden lg:block">
           <CodeWindow />
         </Reveal>
       </div>

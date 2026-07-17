@@ -52,7 +52,7 @@
   --background: #fafafb;
   --foreground: #101318;
   --muted: #565d6b;
-  --subtle: #7b8494;
+  --subtle: #666e7e;
   --surface: rgb(255 255 255 / 0.72);
   --surface-raised: #ffffff;
   --border-color: rgb(16 19 24 / 0.09);
@@ -75,7 +75,7 @@
   --background: #08080d;
   --foreground: #e8eaf0;
   --muted: #a3abbd;
-  --subtle: #6f7789;
+  --subtle: #747c8e;
   --surface: rgb(255 255 255 / 0.04);
   --surface-raised: #10111a;
   --border-color: rgb(232 234 240 / 0.09);

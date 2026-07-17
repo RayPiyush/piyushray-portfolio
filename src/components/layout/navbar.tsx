@@ -48,7 +48,6 @@ export function Navbar() {
         <Link
           href="/"
           className="group flex items-center gap-2.5 rounded-lg font-display text-base font-semibold tracking-tight"
-          aria-label={`${profile.name} — home`}
         >
           <span className="flex size-8 items-center justify-center rounded-lg bg-accent font-mono text-xs font-bold text-accent-foreground shadow-glow transition-transform duration-300 group-hover:scale-105">
             {profile.initials}

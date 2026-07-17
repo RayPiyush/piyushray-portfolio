@@ -25,29 +25,32 @@ export function TextReveal({
     return <Tag className={className}>{text}</Tag>;
   }
 
+  // Screen readers get the plain text; the animated copy is decorative.
   return (
-    <Tag className={cn("inline-block", className)} aria-label={text}>
-      {words.map((word, i) => (
-        <span
-          key={`${word}-${i}`}
-          className="inline-block overflow-hidden pb-1 align-bottom"
-        >
-          <motion.span
-            aria-hidden
-            className="inline-block will-change-transform"
-            initial={{ y: "110%" }}
-            animate={{ y: 0 }}
-            transition={{
-              duration: 0.65,
-              delay: delay + i * 0.055,
-              ease: [0.21, 0.47, 0.32, 0.98],
-            }}
+    <Tag className={cn("inline-block", className)}>
+      <span className="sr-only">{text}</span>
+      <span aria-hidden className="inline-block">
+        {words.map((word, i) => (
+          <span
+            key={`${word}-${i}`}
+            className="inline-block overflow-hidden pb-1 align-bottom"
           >
-            {word}
-            {i < words.length - 1 ? " " : ""}
-          </motion.span>
-        </span>
-      ))}
+            <motion.span
+              className="inline-block will-change-transform"
+              initial={{ y: "110%" }}
+              animate={{ y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: delay + i * 0.045,
+                ease: [0.21, 0.47, 0.32, 0.98],
+              }}
+            >
+              {word}
+              {i < words.length - 1 ? " " : ""}
+            </motion.span>
+          </span>
+        ))}
+      </span>
     </Tag>
   );
 }
