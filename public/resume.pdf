@@ -1,0 +1,86 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 5096 >>
+stream
+BT 0 0 0 rg /F2 20 Tf 50 758 Td (PIYUSH RAY) Tj ET
+BT 0.28 0.29 0.55 rg /F1 10.5 Tf 50 733 Td (Software Engineer - Backend | Java * Spring Boot * Microservices * Azure) Tj ET
+BT 0 0 0 rg /F1 9 Tf 50 718.5 Td (Delhi NCR, India | piyushkumarroy50@gmail.com) Tj ET
+BT 0 0 0 rg /F1 9 Tf 50 706.5 Td (github.com/RayPiyush | linkedin.com/in/piyus1208 | leetcode.com/u/mepiyush_0_8_1_2) Tj ET
+BT 0.28 0.29 0.55 rg /F2 10.5 Tf 50 689.5 Td (SUMMARY) Tj ET
+0.75 0.75 0.8 RG 0.6 w 50 680 m 562 680 l S
+BT 0 0 0 rg /F1 9.5 Tf 50 671 Td (Software engineer with 2+ years of experience building Java and Spring Boot microservices in) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 50 658 Td (production. Focused on reliable batch processing, clean REST API design, and cloud infrastructure on) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 50 645 Td (Azure, with full-stack experience in React, Next.js, and TypeScript and a growing focus on agentic AI.) Tj ET
+BT 0.28 0.29 0.55 rg /F2 10.5 Tf 50 628 Td (EXPERIENCE) Tj ET
+0.75 0.75 0.8 RG 0.6 w 50 618.5 m 562 618.5 l S
+BT 0 0 0 rg /F2 10 Tf 50 609.5 Td (Backend Developer - Tata Consultancy Services) Tj ET
+BT 0.4 0.4 0.45 rg /F1 8.5 Tf 50 597.5 Td (Noida, India | September 2024 - Present) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 585 Td (- Migrated Talend-based batch jobs to Spring Batch on Azure using chunk-oriented processing and) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 64 573 Td (multithreading, adding retry and skip handling for reliable, restartable runs.) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 561 Td (- Built persistence with Spring Data JPA over MySQL, introducing composite indexes and pagination to) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 64 549 Td (speed up high-volume list queries.) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 537 Td (- Designed REST endpoints across multiple Spring Boot microservices with DTO mapping and standardized) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 64 525 Td (global exception handling for clean, consistent API contracts.) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 513 Td (- Extracted modules from a monolithic codebase into independent Spring Boot services, enabling) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 64 501 Td (isolated builds and deployments and improving maintainability.) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 489 Td (- Tuned Azure Redis cache patterns \(TTLs, eviction policy\) and right-sized the cache tier with the) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 64 477 Td (team to lower infrastructure cost.) Tj ET
+BT 0 0 0 rg /F2 10 Tf 50 461 Td (Web Developer Intern - ITJOBXS) Tj ET
+BT 0.4 0.4 0.45 rg /F1 8.5 Tf 50 449 Td (Mumbai, India | August 2023 - October 2023) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 436.5 Td (- Built SEO-optimized web pages with Next.js and TypeScript using server-side rendering and image) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 64 424.5 Td (optimization for faster, discoverable pages.) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 412.5 Td (- Modeled the PostgreSQL schema with Prisma using indexed, normalized relations to support efficient) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 64 400.5 Td (queries.) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 388.5 Td (- Rebuilt layouts with Tailwind CSS for mobile-first responsiveness across breakpoints.) Tj ET
+BT 0.28 0.29 0.55 rg /F2 10.5 Tf 50 372.5 Td (SKILLS) Tj ET
+0.75 0.75 0.8 RG 0.6 w 50 363 m 562 363 l S
+BT 0 0 0 rg /F1 9.5 Tf 50 354 Td (Languages: Java, Python, TypeScript, JavaScript, SQL) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 50 342 Td (Backend: Spring Boot, Spring Batch, Spring Data JPA, REST API Design, FastAPI, Node.js/Express) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 50 330 Td (Cloud & DevOps: Microsoft Azure, Azure Data Factory, Azure Databricks, AWS, Docker, Kubernetes, Vercel) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 50 318 Td (Data & Messaging: MySQL, PostgreSQL, Redis, Prisma, Apache Kafka) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 50 306 Td (AI & Frontend: Agentic AI \(LLM agents, RAG\), React, Next.js, Tailwind CSS) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 50 294 Td (Testing & Tools: JUnit 5, Mockito, Git, Postman) Tj ET
+BT 0.28 0.29 0.55 rg /F2 10.5 Tf 50 278 Td (EDUCATION) Tj ET
+0.75 0.75 0.8 RG 0.6 w 50 268.5 m 562 268.5 l S
+BT 0 0 0 rg /F2 10 Tf 50 259.5 Td (B.Tech, Information Technology - Techno Main Salt Lake, Kolkata) Tj ET
+BT 0.4 0.4 0.45 rg /F1 8.5 Tf 50 247.5 Td (2020 - 2024 | 8.38 / 10 CGPA) Tj ET
+BT 0.28 0.29 0.55 rg /F2 10.5 Tf 50 232 Td (CERTIFICATIONS) Tj ET
+0.75 0.75 0.8 RG 0.6 w 50 222.5 m 562 222.5 l S
+BT 0 0 0 rg /F1 9.5 Tf 58 213.5 Td (- Databricks Certified Data Engineer Associate - Databricks \(Jul 2026, valid to Jul 2028\)) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 201.5 Td (- Full Stack Web Development - Udemy \(May 2023\) | Data Structures in Java - Coding Ninjas \(Apr 2023\)) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 189.5 Td (- Backend Web Development with Node.js & Express - Microsoft Imagine Cup \(Mar 2023\)) Tj ET
+BT 0.28 0.29 0.55 rg /F2 10.5 Tf 50 173.5 Td (ACHIEVEMENTS) Tj ET
+0.75 0.75 0.8 RG 0.6 w 50 164 m 562 164 l S
+BT 0 0 0 rg /F1 9.5 Tf 58 155 Td (- 611 DSA problems solved on LeetCode \(318 Medium, 68 Hard\); contest rating 1638 - top 20% globally) Tj ET
+BT 0 0 0 rg /F1 9.5 Tf 58 143 Td (- Built and open-sourced a 6-service Spring Cloud microservices system \(github.com/RayPiyush\)) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+5544
+%%EOF
