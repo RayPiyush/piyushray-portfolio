@@ -89,7 +89,7 @@ export const projects: Project[] = [
     description:
       "A fully config-driven portfolio built with Next.js App Router, TypeScript, Tailwind CSS v4, and Framer Motion. Lighthouse-100 targets, structured data, PWA-ready — every word of content lives in typed config files.",
     category: "Frontend / Design",
-    status: "In Development",
+    status: "Live",
     featured: true,
     timeline: "2026",
     techStack: ["TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"],
@@ -103,7 +103,10 @@ export const projects: Project[] = [
       "Hitting Lighthouse 100s while keeping rich motion — solved with a ~1KB canvas particle field instead of a 3D library",
     ],
     results: ["You're experiencing the results right now"],
-    links: {},
+    links: {
+      github: "https://github.com/RayPiyush/piyushray-portfolio",
+      demo: "https://piyushray.vercel.app",
+    },
   },
   {
     slug: "brainly-app",
