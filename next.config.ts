@@ -13,6 +13,11 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  experimental: {
+    // Inline CSS into the HTML head — removes the render-blocking
+    // stylesheet request, the largest contributor to mobile LCP.
+    inlineCss: true,
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [

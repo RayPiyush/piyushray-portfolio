@@ -26,7 +26,10 @@
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), ui-monospace, "Cascadia Code", monospace;
+  /* System monospace stack — saves a whole font download on every visit. */
+  --font-mono:
+    ui-monospace, "Cascadia Code", "SF Mono", "JetBrains Mono", Menlo, Consolas,
+    monospace;
 
   --radius-xs: 0.375rem;
   --radius-sm: 0.5rem;
