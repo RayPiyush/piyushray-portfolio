@@ -21,10 +21,12 @@ import {
   SiKubernetes,
   SiDatabricks,
   SiVercel,
+  SiClaude,
+  SiGithubcopilot,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { VscAzure } from "react-icons/vsc";
-import { LuBrainCircuit, LuDatabase, LuNetwork, LuServer } from "react-icons/lu";
+import { LuBrainCircuit, LuDatabase, LuNetwork, LuServer, LuSquareTerminal } from "react-icons/lu";
 import type { Skill, SkillCategory } from "./types";
 
 /**
@@ -136,6 +138,33 @@ export const skills: Skill[] = [
     years: 1,
     level: "Proficient",
     description: "Building LLM-powered agents — tool use, orchestration, and RAG pipelines.",
+  },
+  {
+    name: "Claude / Claude Code",
+    category: "AI",
+    icon: SiClaude,
+    color: "#d97757",
+    years: 1,
+    level: "Advanced",
+    description: "AI-assisted engineering — agentic coding workflows and prompt design.",
+  },
+  {
+    name: "OpenAI Codex",
+    category: "AI",
+    icon: LuSquareTerminal,
+    color: "#8b93ff",
+    years: 1,
+    level: "Proficient",
+    description: "Agentic coding with OpenAI's Codex for automated implementation tasks.",
+  },
+  {
+    name: "GitHub Copilot",
+    category: "AI",
+    icon: SiGithubcopilot,
+    color: "#a3abbd",
+    years: 1,
+    level: "Advanced",
+    description: "In-editor AI pair programming — completions, chat, and code review.",
   },
 
   // ── Frontend ─────────────────────────────────────────────────────

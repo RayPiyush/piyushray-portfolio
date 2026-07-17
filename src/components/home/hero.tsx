@@ -9,8 +9,8 @@ import { CodeWindow } from "./code-window";
 
 /**
  * Server-rendered word-by-word headline reveal using CSS animations only.
- * Unlike the JS-driven TextReveal, the animation starts at first paint —
- * critical for LCP since the hero headline is the largest element.
+ * Words stay visible from the first frame (soft rise, no clipping mask) so
+ * the headline is painted — and LCP-counted — immediately at first paint.
  */
 function HeadlineReveal({ text, delay }: { text: string; delay: number }) {
   const words = text.split(" ");
@@ -21,15 +21,11 @@ function HeadlineReveal({ text, delay }: { text: string; delay: number }) {
         {words.map((word, i) => (
           <span
             key={`${word}-${i}`}
-            className="inline-block overflow-hidden pb-1 align-bottom"
+            className="animate-rise-word inline-block pb-1 align-bottom will-change-transform"
+            style={{ animationDelay: `${delay + i * 0.045}s` }}
           >
-            <span
-              className="animate-rise-word inline-block will-change-transform"
-              style={{ animationDelay: `${delay + i * 0.045}s` }}
-            >
-              {word}
-              {i < words.length - 1 ? " " : ""}
-            </span>
+            {word}
+            {i < words.length - 1 ? " " : ""}
           </span>
         ))}
       </span>

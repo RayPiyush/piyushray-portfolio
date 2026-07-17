@@ -181,10 +181,12 @@ body {
 /*  Keyframes                                                          */
 /* ------------------------------------------------------------------ */
 /* CSS-only hero entrances — start at first paint, no JS required,
-   so above-the-fold content counts toward LCP immediately. */
+   so above-the-fold content counts toward LCP immediately. The headline
+   rise deliberately avoids clipping/opacity-0 so the text is painted
+   (and LCP-counted) from the very first frame. */
 @keyframes rise-word {
   from {
-    transform: translateY(110%);
+    transform: translateY(0.45em);
   }
   to {
     transform: translateY(0);
