@@ -31,6 +31,13 @@ Next.js 16 App Router, TypeScript strict, Tailwind CSS v4, Framer Motion. All pa
 
 **Blog:** drop a `.md` file with `title/description/date/tags` frontmatter into `content/blog/` — listing, reading time, TOC (from `##`/`###`), syntax highlighting, RSS, sitemap, and BlogPosting JSON-LD are automatic (`src/lib/blog.ts`).
 
+## Performance constraints (don't regress these)
+
+- `experimental.inlineCss` is enabled in next.config.ts — CSS ships inlined in the HTML head; there is deliberately no render-blocking stylesheet request.
+- Fonts: only Inter (variable) + Space Grotesk (static 600). `--font-mono` is a system stack — do not add a third downloaded font family without checking mobile LCP.
+- Hero entrances are pure CSS (`animate-rise-word`, `animate-fade-up` in globals.css), not Framer Motion — the headline must stay visible from the first frame (no clipping masks or opacity-0 starts on LCP candidates).
+- Mobile Lighthouse (throttled): ~90-93 Perf, 100/100/100 elsewhere; desktop 99. Local runs vary ±6+ with machine load — trust quiet-machine or PSI numbers.
+
 ## Gotchas
 
 - **Icon libraries:** the installed `lucide-react` (v1.x) has no brand icons (`Github` doesn't exist — use `react-icons/si`), and `react-icons`'s simple-icons set lacks `SiAmazonwebservices` (use `FaAws` from `react-icons/fa`). Verify exports exist before adding icons.
