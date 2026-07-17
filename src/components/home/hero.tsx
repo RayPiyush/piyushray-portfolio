@@ -1,15 +1,62 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, Download, MapPin } from "lucide-react";
 import { profile, yearsOfExperience } from "@/data/profile";
 import { primarySocials } from "@/data/socials";
 import { buttonVariants } from "@/components/ui/button";
 import { Magnetic } from "@/components/motion/magnetic";
-import { Reveal } from "@/components/motion/reveal";
-import { TextReveal } from "@/components/motion/text-reveal";
 import { ParticleField } from "./particle-field";
 import { CodeWindow } from "./code-window";
 
-/** Landing hero — server component composing client motion primitives. */
+/**
+ * Server-rendered word-by-word headline reveal using CSS animations only.
+ * Unlike the JS-driven TextReveal, the animation starts at first paint —
+ * critical for LCP since the hero headline is the largest element.
+ */
+function HeadlineReveal({ text, delay }: { text: string; delay: number }) {
+  const words = text.split(" ");
+  return (
+    <>
+      <span className="sr-only">{text}</span>
+      <span aria-hidden className="inline-block">
+        {words.map((word, i) => (
+          <span
+            key={`${word}-${i}`}
+            className="inline-block overflow-hidden pb-1 align-bottom"
+          >
+            <span
+              className="animate-rise-word inline-block will-change-transform"
+              style={{ animationDelay: `${delay + i * 0.045}s` }}
+            >
+              {word}
+              {i < words.length - 1 ? " " : ""}
+            </span>
+          </span>
+        ))}
+      </span>
+    </>
+  );
+}
+
+/** CSS fade-up wrapper for hero blocks — visible pre-hydration. */
+function FadeUp({
+  delay,
+  className,
+  children,
+}: {
+  delay: number;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={className}>
+      <div className="animate-fade-up" style={{ animationDelay: `${delay}s` }}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+/** Landing hero — server component; entrances are pure CSS for fast LCP. */
 export function Hero() {
   return (
     <section className="relative overflow-hidden" aria-label="Introduction">
@@ -23,8 +70,8 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-5xl gap-14 px-6 pt-40 pb-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:pt-48 lg:pb-32">
         <div>
-          {/* Availability + company */}
-          <Reveal y={16}>
+          {/* Availability + location */}
+          <FadeUp delay={0}>
             <div className="flex flex-wrap items-center gap-3">
               {profile.availability.open ? (
                 <span className="glass inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs text-muted">
@@ -40,17 +87,17 @@ export function Hero() {
                 {profile.location}
               </span>
             </div>
-          </Reveal>
+          </FadeUp>
 
           {/* Headline */}
           <h1 className="mt-8 font-display text-4xl leading-[1.08] font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            <TextReveal text="I build resilient systems" delay={0.1} />{" "}
+            <HeadlineReveal text="I build resilient systems" delay={0.05} />{" "}
             <span className="text-gradient animate-gradient-pan">
-              <TextReveal text="and refined experiences." delay={0.3} />
+              <HeadlineReveal text="and refined experiences." delay={0.25} />
             </span>
           </h1>
 
-          <Reveal delay={0.35} y={16}>
+          <FadeUp delay={0.3}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
               {profile.name} — {profile.role}
               {profile.company ? (
@@ -69,10 +116,10 @@ export function Hero() {
               , with {yearsOfExperience}+ years turning hard problems into elegant,
               production-grade software.
             </p>
-          </Reveal>
+          </FadeUp>
 
           {/* CTAs */}
-          <Reveal delay={0.5} y={16}>
+          <FadeUp delay={0.45}>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Magnetic>
                 <Link
@@ -97,10 +144,10 @@ export function Hero() {
                 </a>
               </Magnetic>
             </div>
-          </Reveal>
+          </FadeUp>
 
           {/* Socials */}
-          <Reveal delay={0.65} y={12}>
+          <FadeUp delay={0.6}>
             <ul className="mt-10 flex items-center gap-2" aria-label="Social profiles">
               {primarySocials.map((social) => (
                 <li key={social.name}>
@@ -120,13 +167,13 @@ export function Hero() {
               <li aria-hidden className="ml-2 h-px w-12 bg-border-strong" />
               <li className="font-mono text-xs text-subtle">stay connected</li>
             </ul>
-          </Reveal>
+          </FadeUp>
         </div>
 
         {/* Floating editor card */}
-        <Reveal delay={0.4} y={32} className="hidden lg:block">
+        <FadeUp delay={0.35} className="hidden lg:block">
           <CodeWindow />
-        </Reveal>
+        </FadeUp>
       </div>
     </section>
   );

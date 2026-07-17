@@ -40,6 +40,8 @@
   --shadow-glow: 0 0 40px -8px var(--glow);
 
   --animate-marquee: marquee 40s linear infinite;
+  --animate-rise-word: rise-word 0.6s cubic-bezier(0.21, 0.47, 0.32, 0.98) both;
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98) both;
   --animate-float: float 7s ease-in-out infinite;
   --animate-float-slow: float 11s ease-in-out infinite;
   --animate-gradient-pan: gradient-pan 8s ease infinite;
@@ -178,6 +180,28 @@ body {
 /* ------------------------------------------------------------------ */
 /*  Keyframes                                                          */
 /* ------------------------------------------------------------------ */
+/* CSS-only hero entrances — start at first paint, no JS required,
+   so above-the-fold content counts toward LCP immediately. */
+@keyframes rise-word {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
